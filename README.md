@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/AzurePipeline-Java/JavaPipeline/_apis/build/status/viniciusCostaLins.pipelines-java?branchName=master)](https://dev.azure.com/AzurePipeline-Java/JavaPipeline/_build/latest?definitionId=1&branchName=master)
 
 # Contributing
 
