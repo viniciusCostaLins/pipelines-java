@@ -51,13 +51,15 @@ CarRentSolution.Tests - Tentei cobrir 80% da Web API bem como suas camadas adjac
 
 ## Como Rodar a Aplicação
 
+### Back-End 
+
 1. Primeiro devemos alterar a string de conexão que fica no arquivo `appsettings.json` do projeto `CarRentSolution.Api` na chave `DefaultConnection`.
 Coloque o valor do seu servidor de banco local
 2. Build a Solução
 3. No Package Manager Console crie as migrações (comandos: `Add-Migration nomeDamigrarion` e depois `Update-Database` lembrar de selecionar o projeto CarRentSolution.Infra.Data na opção Default project)
 4. Start Debbuging (F5) a aplicação será executada na porta https://localhost:44399
 5. Acesse https://localhost:44399/swagger/index.html para ver a documentação da API no Swagger
-
+6. Para o front-end funcionar a web api deve estar rodando nesse endereço e porta: https://localhost:44399
 
 ## Development server
 
