@@ -17,6 +17,7 @@ Para o backend Foi criado a solution pelo visual studio chamada CarRentSolution.
 
 - Visual Studio 2017
 - Visual Code
+- Microsoft SQL Server Express
 - Microsoft SQL Server Management Studio 17
 - Angular CLI versão 8.3.19
 
@@ -47,6 +48,16 @@ Estes projetos foram criados a partir do template Class Library (.NET Core) do V
 Estes projetos foram utilizados o template xUnit Test Project (.NET Core)
 
 CarRentSolution.Tests - Tentei cobrir 80% da Web API bem como suas camadas adjacentes.
+
+## Como Rodar a Aplicação
+
+1- Primeiro devemos alterar a string de conexão que fica no arquivo 'appsettings.json' do projeto CarRentSolution.Api na chave DefaultConnection.
+Coloque o valor do seu servidor de banco local
+2- Build a Solução
+3- No Package Manager Console crie as migrações (comandos: "Add-Migration nomeDamigrarion" e depois "Update-Database" lembrar de selecionar o projeto CarRentSolution.Infra.Data na opção Default project)
+4- Start Debbuging (F5) a aplicação será executada na porta https://localhost:44399
+5- Acesse https://localhost:44399/swagger/index.html para ver a documentação da API no Swagger
+
 
 ## Development server
 
