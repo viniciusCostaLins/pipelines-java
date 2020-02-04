@@ -1,32 +1,73 @@
-[![Build Status](https://dev.azure.com/AzurePipeline-Java/JavaPipeline/_apis/build/status/viniciusCostaLins.pipelines-java?branchName=master)](https://dev.azure.com/AzurePipeline-Java/JavaPipeline/_build/latest?definitionId=1&branchName=master)
+# CarRent Solution
 
-# Contributing
+Para o desenvolvimento deste projeto foi abordado a modelagem DDD que segue um conjunto de práticas com
+objetivo de facilitar a implementação de regras e processos de negócios que tratamos como domínio.
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+## Para isso o projeto foi arquitetado da seguinte forma:
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+Para o backend Foi criado a solution pelo visual studio chamada CarRentSolution. Dentro dela encontram-se os seguintes projetos:
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+- CarRentSolution.API (0)
+- CarRentSolution.Test (1)
+- CarRentSolution.Application (2)
+- CarRentSolution.Domain (3)
+- CarRentSolution.Infra.Data (4)
 
-# Legal Notices
+### SOFTWARES UTILIZADOS
 
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+- Visual Studio 2017
+- Visual Code
+- Microsoft SQL Server Management Studio 17
+- Angular CLI versão 8.3.19
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+### FRONT-END
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+- Camada de Apresentação
+- Angular 7 consultando a Web API
 
-Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+### BACK-END
+
+- .NET Core 2.2.0
+- Swagger para documentação da API
+- EF Core utilizando a abordagem Code First
+
+- Arquitetura:
+
+Estes projetos foram criados a partir do template Class Library (.NET Core) do Visual Studio 2017.
+	
+	* API (0): Web API que disponibiliza os endpoints para a camada de apresentação
+	* Domain (3): Serviço do domínio que atende partes do negócio que não se encaixam em entidades específicas, trabalha com diversas entidades, realiza persistência através de repositórios e etc.
+	* Application (2): Serviço de aplicação que orquestra ações disparadas pela camada de apresentação e fornece DTOs para comunicação entre as demais camadas e para o consumo da camada de apresentação.
+	* Infra (4): Realiza a persistência das entidades se comunicando diretamente com o meio de acesso aos dados, é utilizado apenas um repositório por agregação.
+		** Data: Repositório dos dados
+		** External Services: Faz comunicação com serviços externos como o Amazon SES para o envio de email
+	
+### Testes Automatizados
+
+Estes projetos foram utilizados o template xUnit Test Project (.NET Core)
+
+CarRentSolution.Tests - Tentei cobrir 80% da Web API bem como suas camadas adjacentes.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
