@@ -24,7 +24,8 @@ Para o backend Foi criado a solution pelo visual studio chamada CarRentSolution.
 ### FRONT-END
 
 - Camada de Apresentação
-- Angular 7 consultando a Web API
+- Angular 8 consultando a Web API
+- Para os testes unitários foi utilizado o Jasmime
 
 ### BACK-END
 
